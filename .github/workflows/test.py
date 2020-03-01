@@ -1,5 +1,6 @@
 import unittest
 import task
+import math
 
 class TestCase(unittest.TestCase):
 
@@ -9,7 +10,13 @@ class TestCase(unittest.TestCase):
 
     def test2(self):
         expected = "failure"
-        self.assertEqual(expected, task.firstrun())
+        self.assertNotEqual(expected, task.firstrun())
+
+    def test_radius(self):
+            C = 60
+            expected =  C/(2*math.pi)
+            self.assertEqual(expected, task.radius(C))
+
 
 if __name__ == '__main__':
     unittest.main()
