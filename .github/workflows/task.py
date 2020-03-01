@@ -1,0 +1,2 @@
+def fistrun():
+    return "success"
